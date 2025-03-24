@@ -9,11 +9,12 @@
   padding: 4rem 10%;
   background-color: #0d1126;
   // background-color: blue;
+  padding-top: 150px;
 
   h2 {
     font-family: "Open Sans", sans-serif;
-    width: 100vw;
-    padding-left: 35vw;
+    width: 1000px;
+    // padding-left: 10px;
     font-size: 1.7rem;
     color: #95B4E1 // height: 20px;
   }
@@ -23,6 +24,7 @@
   display: flex;
   justify-content: space-around;
   // min-height: 80vh;
+  // background-color: green;
   align-items: center;
   gap: 5rem;
   // padding: 4rem 10%;
@@ -50,7 +52,7 @@
       padding-right: 1rem;
       // border-right: 2px solid #b0c5ff;
       text-align: right;
-      gap: 1rem;
+      gap: 0.7rem;
 
       // Create the timeline line
       &::before {
@@ -61,7 +63,7 @@
         right: -0.1rem; // Align with bullet points
         top: 1.5rem; // Start from the first bullet
         bottom: 10px; // End at the last bullet
-        height: 17.5rem;
+        height: 20.5rem;
       }
 
       .timeline-item {
@@ -71,7 +73,7 @@
         cursor: pointer;
         position: relative;
         transition: color 0.3s ease;
-        // padding-right: 1.5rem;
+        padding-right: 0.6rem;
 
         &::after {
           content: "";
@@ -88,6 +90,11 @@
 
         &:hover {
           color: #A8DAFF;
+          font-weight: bold;
+
+          &::after {
+            background-color: #A8DAFF;
+          }
         }
       }
 
@@ -105,14 +112,15 @@
 
   .timeline-right {
     flex: 2;
-    width: 700px;
+    width: 670px;
     display: flex;
     align-items: stretch; // Ensure equal height
+    padding-left: 1rem;
 
-    .experience-panel {
+    .panel {
       border: 1px solid #95B4E1;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 2.2rem;
+      border-radius: 15px;
       background-color: #0d1126;
       transition: all 0.3s ease;
 
@@ -124,10 +132,11 @@
       justify-content: center; // Centers content vertically
 
       .title {
-        height: 40px;
+        height: 60px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0rem;
 
         h3 {
           font-size: 1.7rem;
@@ -148,14 +157,15 @@
         font-size: 1rem;
         font-weight: 500;
         color: #A8DAFF;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
       }
 
       ul {
         // list-style-type: bulle;
         padding-left: 12px;
         // flex-grow: 1; // Ensures consistent spacing within the box
-        height: 150px;
+        height: 160px;
 
         li {
           font-size: 0.9rem;
@@ -207,7 +217,7 @@
   .timeline-right {
     width: 100%;
 
-    .experience-panel {
+    .panel {
       min-height: 320px; // Slightly larger on smaller screens for consistency
     }
   }

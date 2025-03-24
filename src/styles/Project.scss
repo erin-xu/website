@@ -12,10 +12,10 @@
   justify-content: center;
   flex-direction: column;
   min-height: 90vh;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
   padding: 4rem 10%;
-  background-color: grey;
+  // background-color: grey;
   padding-left: 16%;
   padding-right: 16%;
   background-color: #0d1126;
@@ -26,17 +26,17 @@
     // padding-left: 2rem;
     // color: #8ea2ff;
     font-family: "Open Sans", sans-serif;
-    width: 100%;
+    width: 1000px;
     // align-items: flex-start;
     text-align: left;
-    padding-left: 1.5rem;
-    margin-left: 1.5rem;
+    // padding-left: 1.5rem;
     font-size: 1.7rem;
+    width: 1000px;
     color: #95B4E1 // height: 20px;
   }
 
   .projects-container {
-    width: 100%;
+    width: 1030px;
     display: flex;
     // flex-direction: column;
     justify-content: space-around;
@@ -57,7 +57,7 @@
     // border: 1px solid #b0c5ff;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-15px);
     }
 
     .folder {
@@ -86,7 +86,7 @@
         }
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.2);
         }
       }
     }
@@ -138,23 +138,29 @@
     }
   }
 
-  .view-more {
-    font-family: "Open Sans", sans-serif;
-    width: 8rem;
-    text-align: right;
-    // margin-top: 1rem;
-    margin-right: 1.5rem;
-    font-size: 1rem;
-    color: #95B4E1;
-    cursor: pointer;
-    background: none;
-    font-weight: bold;
-    border: none;
-    transition: color 0.3s ease, transform 0.2s ease;
+  .view-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-    &:hover {
-      color: #b0c5ff;
-      transform: scale(1.1);
+    .view-more {
+      font-family: "Open Sans", sans-serif;
+      width: 8rem;
+      text-align: right;
+      // margin-top: 1rem;
+      font-size: 1rem;
+      color: #95B4E1;
+      cursor: pointer;
+      background: none;
+      font-weight: bold;
+      border: none;
+      transition: color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        // color: #b0c5ff;
+        transform: scale(1.1);
+      }
     }
   }
 }

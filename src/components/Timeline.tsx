@@ -10,6 +10,16 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    company: "TeaCup",
+    position: "Software Development Intern",
+    duration: "Dec 2021 - Aug 2023",
+    details: [
+      "Programmed in Swift to create the initial iteration of community-building social media app targeting the elderly population",
+      "Integrated Agora SDK to create real-time video calling functionality and Firebase to allow for user login and authentication",
+      "Conducted market research and user surveys, using findings to make product design decisions for an early-stage startup",
+    ],
+  },
+  {
     company: "Cirrus Logic",
     position: "Software Development Engineer Intern",
     duration: "May 2023 - Aug 2023",
@@ -84,7 +94,7 @@ const Timeline: React.FC = () => {
         </div>
 
         <div className="timeline-right">
-          <div className="experience-panel">
+          <div className="panel">
             <div className="title">
               <h3>{selectedExperience.company}</h3>
               <p className="duration">{selectedExperience.duration}</p>

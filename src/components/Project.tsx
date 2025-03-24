@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Project.scss";
 import folder from '../icons/folder.svg';
 import github from '../icons/github.svg';
+// Our pipeline involves passing text through LLaMA2 to identify entities (nodes) and relationships (edges), then applying an unsupervised graph clustering algorithm to group closely related entities into neighborhoods. When a query is submitted, we compare it against these neighborhoods, entities, and relationships, retrieving data from those that rank the highest in relevance.
 
 const projects = [
   {
@@ -9,8 +10,8 @@ const projects = [
     organization: "Group Project",
     date: "Aug 2024 - Dec 2024",
     description:
-      "A web app implementing a queueing system to facilitate Cornell office hours. Students can post questions, TAs can assign themselves to questions, and more.",
-    tech: ["Python", "Llama3.1", "Streamlit"],
+      "A simplified Graph RAG pipeline that uses LLaMA3.1 to extract globally relevant entities/relationships, allowing for more accurate query responses.",
+    tech: ["Python", "LLaMA3.1", "Streamlit"],
     repoLink: "https://github.com/erin-xu/graph-rag",
   },
   {
@@ -39,7 +40,7 @@ const Projects: React.FC = () => {
       <h2>/ projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <div key={index} className="project-card" onClick={() => window.open(project.repoLink, "_blank")}>
             <div className="card-header">
               <img className="folder" src={folder} alt="Folder icon" />
               <button
@@ -61,13 +62,14 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* Clickable "View More" button */}
-      <button
-        className="view-more"
-        onClick={() => window.open("https://github.com/erin-xu?tab=repositories", "_blank")}
-      >
-        view more &gt;&gt;
-      </button>
+      <div className="view-container">
+        <button
+          className="view-more"
+          onClick={() => window.open("https://github.com/erin-xu?tab=repositories", "_blank")}
+        >
+          view more &gt;&gt;
+        </button>
+      </div>
     </section>
   );
 };
