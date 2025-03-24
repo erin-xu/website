@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/About.scss";
 import paris from '../images/paris.jpg';
-import china from '../images/china.jpg';
+import china from '../images/belgium.jpg';
 
 const About = () => {
   return (
