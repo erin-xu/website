@@ -1,0 +1,214 @@
+.experience {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 45vh;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 10%;
+  background-color: #0d1126;
+  // background-color: blue;
+
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    width: 100vw;
+    padding-left: 35vw;
+    font-size: 1.7rem;
+    color: #95B4E1 // height: 20px;
+  }
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: space-around;
+  // min-height: 80vh;
+  align-items: center;
+  gap: 5rem;
+  // padding: 4rem 10%;
+  // background-color: grey;
+  // color: #b0c5ff;
+
+  .timeline-left {
+    flex: 1;
+    text-align: right;
+    width: 200px;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #F5F5F5;
+      margin-bottom: 1rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      width: 13rem;
+
+      position: relative;
+      padding-right: 1rem;
+      // border-right: 2px solid #b0c5ff;
+      text-align: right;
+      gap: 1rem;
+
+      // Create the timeline line
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px; // Line thickness
+        background-color: #F5F5F5;
+        right: -0.1rem; // Align with bullet points
+        top: 1.5rem; // Start from the first bullet
+        bottom: 10px; // End at the last bullet
+        height: 17.5rem;
+      }
+
+      .timeline-item {
+        font-size: 1rem;
+        padding: 1rem 0;
+        color: #F5F5F5;
+        cursor: pointer;
+        position: relative;
+        transition: color 0.3s ease;
+        // padding-right: 1.5rem;
+
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: #F5F5F5;
+          border-radius: 50%;
+          position: absolute;
+          right: -1.35rem;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: background-color 0.3s ease;
+        }
+
+        &:hover {
+          color: #A8DAFF;
+        }
+      }
+
+      .active {
+        color: #A8DAFF;
+        font-weight: bold;
+        font-size: 1.1rem;
+
+        &::after {
+          background-color: #A8DAFF;
+        }
+      }
+    }
+  }
+
+  .timeline-right {
+    flex: 2;
+    width: 700px;
+    display: flex;
+    align-items: stretch; // Ensure equal height
+
+    .experience-panel {
+      border: 1px solid #95B4E1;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      background-color: #0d1126;
+      transition: all 0.3s ease;
+
+      // width: 100%;
+      width: 700px;
+      // min-height: 280px; // Ensures consistent height
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // Centers content vertically
+
+      .title {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 1.7rem;
+          font-weight: 600;
+          color: #A8DAFF;
+          margin-bottom: 0rem;
+          font-weight: bold;
+        }
+
+        .duration {
+          font-size: 0.9rem;
+          color: #F5F5F5;
+          margin-bottom: 0rem;
+        }
+      }
+
+      .position {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #A8DAFF;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        // list-style-type: bulle;
+        padding-left: 12px;
+        // flex-grow: 1; // Ensures consistent spacing within the box
+        height: 150px;
+
+        li {
+          font-size: 0.9rem;
+          color: #F5F5F5;
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+          position: relative;
+
+          // &::before {
+          //   content: "•"; // Custom bullet point
+          //   font-size: 1.2rem;
+          //   color: #8ea2ff;
+          //   position: absolute;
+          //   left: 0;
+          //   top: 0;
+          // }
+
+          strong {
+            color: #8ea2ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+  }
+
+  .timeline-left {
+    text-align: right;
+
+    .timeline {
+      border-right: none;
+      padding-right: 0;
+
+      .timeline-item::after {
+        display: none;
+      }
+    }
+  }
+
+  .timeline-right {
+    width: 100%;
+
+    .experience-panel {
+      min-height: 320px; // Slightly larger on smaller screens for consistency
+    }
+  }
+}

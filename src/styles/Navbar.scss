@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  // left: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  width: 100%;
+
+  gap: 50px;
+  background-color: #0d1126;
+  // background-color: grey;
+  transition: transform 0.3s ease-in-out;
+  font-family: "Open Sans", sans-serif;
+  z-index: 1000;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  &.visible {
+    transform: translateY(0);
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+
+    &:hover {
+      color: #8ea2ff;
+    }
+
+    &.active {
+      font-weight: bold;
+      color: #8ea2ff !important;
+      /* Ensure it applies */
+      border-bottom: 2px solid #8ea2ff !important;
+    }
+  }
+}
