@@ -72,7 +72,7 @@ const experiences: Experience[] = [
 ];
 
 const Timeline: React.FC = () => {
-  const [selectedExperience, setSelectedExperience] = useState(experiences[4]);
+  const [selectedExperience, setSelectedExperience] = useState(experiences[5]);
 
   return (
     <div className="experience">
