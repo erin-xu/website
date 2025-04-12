@@ -12,7 +12,9 @@ const About = () => {
         <p>
           I’m a senior at Cornell University majoring in Computer Science. I love
           building things with technology, and I’m especially interested in
-          developing high-performance, low-latency systems.
+          developing high-performance, low-latency systems. After graduation,
+          I’ll be joining Hudson River Trading as a Core Developer. Feel free to
+          explore my portfolio and reach out to connect!
         </p>
       </div>
       <div className="about-images">
