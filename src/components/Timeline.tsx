@@ -12,7 +12,7 @@ const experiences: Experience[] = [
   {
     company: "TeaCup",
     position: "Software Development Intern",
-    duration: "Dec 2021 - Aug 2023",
+    duration: "Dec 2021 - Jan 2022",
     details: [
       "Programmed in **Swift** to create the initial iteration of a community-building social media app targeting the elderly population",
       "Integrated Agora SDK to create real-time video calling functionality and **Firebase** to allow for user login and authentication",
@@ -22,7 +22,7 @@ const experiences: Experience[] = [
   {
     company: "Cirrus Logic",
     position: "Software Development Engineer Intern",
-    duration: "May 2023 - Aug 2023",
+    duration: "May 2022 - Aug 2022",
     details: [
       "Automated workflow of importing chip requirements into a requirement management system by creating a checker workflow",
       "Leveraged **Python** to implement a multilayer comparison algorithm performing complex HTML processing",
