@@ -50,9 +50,9 @@ const Navbar = () => {
       let newActiveSection = activeSection; // Default section
 
       for (const section of sections) {
-        const element = document.getElementById(`.${section}-container`);
+        const element = document.getElementById(section);
         if (element) {
-          console.log("true")
+          console.log(element)
           const rect = element.getBoundingClientRect();
           // Check if the section is in the viewport
           if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {

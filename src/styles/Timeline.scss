@@ -3,19 +3,20 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  min-height: 45vh;
+  height: 50vh;
+  // margin-top: 20vh;
   align-items: center;
-  gap: 1rem;
-  padding: 4rem 10%;
+  gap: 1vw;
+  padding: 4vw 10%;
   background-color: #0d1126;
   // background-color: blue;
-  padding-top: 80px;
+  padding-top: 20vh;
 
   h2 {
     font-family: "Open Sans", sans-serif;
-    width: 1000px;
+    width: 62vw;
     // padding-left: 10px;
-    font-size: 1.7rem;
+    font-size: 1.8vw;
     color: #95B4E1 // height: 20px;
   }
 }
@@ -26,7 +27,7 @@
   // min-height: 80vh;
   // background-color: green;
   align-items: center;
-  gap: 5rem;
+  gap: 5vw;
   // padding: 4rem 10%;
   // background-color: grey;
   // color: #b0c5ff;
@@ -34,74 +35,78 @@
   .timeline-left {
     flex: 1;
     text-align: right;
-    width: 200px;
+    width: 12vw;
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       font-weight: 600;
       color: #F5F5F5;
-      margin-bottom: 1rem;
+      margin-bottom: 1vw;
     }
 
     .timeline {
       display: flex;
       flex-direction: column;
-      width: 13rem;
+      width: 13vw;
 
       position: relative;
-      padding-right: 1rem;
+      padding-right: 1vw;
       // border-right: 2px solid #b0c5ff;
       text-align: right;
-      gap: 0.7rem;
+      gap: 0.5vw;
 
       // Create the timeline line
       &::before {
         content: "";
         position: absolute;
-        width: 1px; // Line thickness
+        width: 0.052vw; // Line thickness
         background-color: #F5F5F5;
-        right: -0.1rem; // Align with bullet points
-        top: 1.5rem; // Start from the first bullet
-        bottom: 10px; // End at the last bullet
-        height: 20.5rem;
+        right: -0.1vw; // Align with bullet points
+        top: 1.5vw; // Start from the first bullet
+        bottom: 0.52vw; // End at the last bullet
+        height: 19.8vw;
       }
 
       .timeline-item {
-        font-size: 1rem;
-        padding: 1rem 0;
+        font-size: 1.05vw;
+        padding: 1vw 0;
         color: #F5F5F5;
         cursor: pointer;
         position: relative;
         transition: color 0.3s ease;
-        padding-right: 0.6rem;
+        padding-right: 0.6vw;
 
         &::after {
           content: "";
-          width: 10px;
-          height: 10px;
+          width: 0.52vw;
+          height: 0.52vw;
           background-color: #F5F5F5;
           border-radius: 50%;
           position: absolute;
-          right: -1.35rem;
+          right: -1.35vw;
           top: 50%;
           transform: translateY(-50%);
           transition: background-color 0.3s ease;
         }
 
-        &:hover {
-          color: #A8DAFF;
-          font-weight: bold;
+        .timeline-text {
+          &:hover {
+            color: #A8DAFF;
+            font-weight: bold;
 
-          &::after {
-            background-color: #A8DAFF;
+            &::after {
+              background-color: #A8DAFF;
+            }
           }
+
         }
+
       }
 
       .active {
         color: #A8DAFF;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.1vw;
 
         &::after {
           background-color: #A8DAFF;
@@ -112,65 +117,74 @@
 
   .timeline-right {
     flex: 2;
-    width: 670px;
+    // width: 670px;
+    width: 45vw;
+    height: 21vw;
+    // height: 20vw;
     display: flex;
     align-items: stretch; // Ensure equal height
-    padding-left: 1rem;
+    padding-left: 1vw;
 
     .panel {
-      border: 1px solid #95B4E1;
-      padding: 1rem 2.2rem;
-      border-radius: 15px;
+      border: 0.07vw solid #95B4E1;
+      padding: 0.9vw 2.5vw 1.9vw;
+      border-radius: 1.5vw;
       background-color: #0d1126;
       transition: all 0.3s ease;
 
       // width: 100%;
-      width: 700px;
+      // width: 700px;
+      width: 40vw;
       // min-height: 280px; // Ensures consistent height
       display: flex;
       flex-direction: column;
       justify-content: center; // Centers content vertically
 
       .title {
-        height: 60px;
+        // height: 60px;
+        height: 3.12vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0rem;
 
         h3 {
-          font-size: 1.7rem;
+          font-size: 1.8vw;
           font-weight: 600;
           color: #A8DAFF;
-          margin-bottom: 0rem;
+          margin-bottom: 0vw;
           font-weight: bold;
+          margin-top: 0rem;
         }
 
         .duration {
-          font-size: 0.9rem;
+          font-size: 1vw;
           color: #F5F5F5;
-          margin-bottom: 0rem;
+          margin-bottom: 0vw;
+          margin-top: 0rem;
         }
       }
 
       .position {
-        font-size: 1rem;
+        font-size: 1vw;
         font-weight: 500;
         color: #A8DAFF;
-        margin-bottom: 1rem;
-        margin-top: 0.5rem;
+        margin-bottom: 0.3vw;
+        margin-top: 0vw;
       }
 
       ul {
         // list-style-type: bulle;
-        padding-left: 12px;
+        // padding-left: 12px
+        padding-left: 0.624vw;
         // flex-grow: 1; // Ensures consistent spacing within the box
-        height: 160px;
+        // height: 160px;
+        height: 8.5vw;
 
         li {
-          font-size: 0.9rem;
+          font-size: 1vw;
           color: #F5F5F5;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.5vw;
           line-height: 1.4;
           position: relative;
 
@@ -197,33 +211,33 @@
   }
 }
 
-// Responsive Styles
-@media (max-width: 768px) {
-  .timeline-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 5%;
-  }
+// // Responsive Styles
+// @media (max-width: 768px) {
+//   .timeline-container {
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 2rem;
+//     padding: 2rem 5%;
+//   }
 
-  .timeline-left {
-    text-align: right;
+//   .timeline-left {
+//     text-align: right;
 
-    .timeline {
-      border-right: none;
-      padding-right: 0;
+//     .timeline {
+//       border-right: none;
+//       padding-right: 0;
 
-      .timeline-item::after {
-        display: none;
-      }
-    }
-  }
+//       .timeline-item::after {
+//         display: none;
+//       }
+//     }
+//   }
 
-  .timeline-right {
-    width: 100%;
+//   .timeline-right {
+//     width: 100%;
 
-    .panel {
-      min-height: 320px; // Slightly larger on smaller screens for consistency
-    }
-  }
-}
+//     .panel {
+//       min-height: 320px; // Slightly larger on smaller screens for consistency
+//     }
+//   }
+// }

@@ -101,7 +101,8 @@ const Timeline: React.FC = () => {
                   }`}
                 onClick={() => setSelectedExperience(exp)}
               >
-                {exp.company}
+                {/* {exp.company} */}
+                <span className="timeline-text">{exp.company}</span>
               </div>
             ))}
           </div>

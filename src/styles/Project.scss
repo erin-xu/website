@@ -1,69 +1,60 @@
 .projects {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // padding: 4rem 10%;
-  // color: #b0c5ff;
-  // width: 75vh;
-  // min-height: 80vh;
   font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 90vh;
+  height: 90vh;
   align-items: center;
-  gap: 1rem;
-  padding: 4rem 10%;
-  // background-color: grey;
-  padding-left: 16%;
-  padding-right: 16%;
+  gap: 1vw;
+  padding: 4vw 5%;
+  /* Adjust padding */
   background-color: #0d1126;
+  overflow-x: auto;
+  /* Allow horizontal scrolling when the container is too wide */
 
   h2 {
-    // font-size: 1.5rem;
-    // align-self: flex-start;
-    // padding-left: 2rem;
-    // color: #8ea2ff;
     font-family: "Open Sans", sans-serif;
-    width: 1000px;
-    // align-items: flex-start;
+    width: 90%;
+    /* Make it responsive */
+    max-width: 62vw;
+    /* Optional: Set a max-width */
     text-align: left;
-    // padding-left: 1.5rem;
-    font-size: 1.7rem;
-    width: 1000px;
-    color: #95B4E1 // height: 20px;
+    font-size: 1.8vw;
+    color: #95B4E1;
   }
 
   .projects-container {
-    width: 1030px;
+    width: 62vw;
+    /* Make the container width responsive */
+    // max-width: 53.56vw;
+    /* Optional: Set a max-width */
     display: flex;
-    // flex-direction: column;
-    justify-content: space-around;
-    // gap: 2rem;
-    // margin-top: 1rem;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    /* Ensure items wrap on small screens */
+    gap: 1vw;
+    /* Add spacing between cards */
   }
 
   .project-card {
     background-color: rgba(43, 118, 173, 0.18);
-    padding: 1.5rem;
-    border-radius: 15px;
-    width: 260px;
-    height: 250px;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    width: 16.1vw;
+    height: 15.6vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
-    // border: 1px solid #b0c5ff;
 
     &:hover {
-      transform: translateY(-15px);
+      transform: translateY(-1.2vw);
       cursor: pointer;
     }
 
     .folder {
-      height: 30px;
-      width: 30px;
+      height: 2.2vw;
+      width: 2.2vw;
     }
 
     .card-header {
@@ -82,8 +73,8 @@
         transition: transform 0.2s ease;
 
         img {
-          height: 32px;
-          width: 32px;
+          height: 2.2vw;
+          width: 2.2vw;
         }
 
         &:hover {
@@ -93,64 +84,67 @@
     }
 
     h3 {
-      font-size: 1.6rem;
+      font-size: 1.7vw;
       color: #A8DAFF;
-      margin-top: 0.3rem;
-      margin-bottom: 0rem;
+      margin-top: 0.4vw;
+      margin-bottom: 0vw;
     }
 
     .organization {
-      font-size: 0.9rem;
+      font-size: 0.9vw;
       color: #95B4E1;
-      margin-top: 0.5rem;
-      margin-bottom: 0rem;
+      margin-top: 0.5vw;
+      margin-bottom: 0vw;
+      font-weight: 500;
     }
 
     .date {
-      font-size: 0.85rem;
+      font-size: 0.85vw;
       color: #95B4E1;
-      margin-top: 0rem;
-      margin-bottom: 0rem;
+      margin-top: 0vw;
+      margin-bottom: 0vw;
+      font-weight: 500;
     }
 
     .description {
-      font-size: 0.8rem;
+      font-size: 0.8vw;
       color: #F5F5F5;
       line-height: 1.4;
       flex-grow: 1;
-      margin-top: 0.9rem;
-      margin-bottom: 0rem;
+      margin-top: 0.9vw;
+      margin-bottom: 0vw;
+      font-weight: 500;
     }
 
     .tech-stack {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.7rem;
-      margin-bottom: 0rem;
+      // flex-wrap: wrap;
+      gap: 0.5vw;
+      margin-top: 0.7vw;
+      margin-bottom: 0vw;
 
       .tech {
-        font-size: 0.75rem;
-        // background-color: rgba(255, 255, 255, 0.1);
-        padding: 0.3rem 0.3rem;
-        border-radius: 5px;
+        font-size: 0.75vw;
+        padding: 0.3vw 0.3vw;
+        border-radius: 0.26vw;
         color: #95B4E1;
       }
     }
   }
 
   .view-container {
-    width: 1000px;
+    width: 90%;
+    /* Make the view-container responsive */
+    max-width: 62vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
     .view-more {
       font-family: "Open Sans", sans-serif;
-      width: 8rem;
+      width: 8vw;
       text-align: right;
-      // margin-top: 1rem;
-      font-size: 1rem;
+      font-size: 1vw;
       color: #95B4E1;
       cursor: pointer;
       background: none;
@@ -159,21 +153,31 @@
       transition: color 0.3s ease, transform 0.2s ease;
 
       &:hover {
-        // color: #b0c5ff;
         transform: scale(1.1);
       }
     }
   }
 }
 
-// Responsive Styling
-@media (max-width: 900px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-  }
+// /* Make the project container scrollable on smaller screens */
+// @media (max-width: 768px) {
+//   .projects-container {
+//     width: 100%;
+//     flex-direction: column;
+//     align-items: center;
+//   }
 
-  .project-card {
-    width: 90%;
-  }
-}
+//   .project-card {
+//     width: 100%;
+//     /* Make the project cards take full width on small screens */
+//     max-width: 260px;
+//     /* Optional: limit the maximum width of cards */
+//     margin-bottom: 1rem;
+//   }
+
+//   .view-container {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+// }

@@ -3,6 +3,7 @@ import NavBar from './components/Navbar'
 import About from './components/About'
 import Timeline from './components/Timeline'
 import Project from './components/Project'
+import Contact from './components/Contact'
 import './styles.scss';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Timeline />
       <Project />
+      <Contact />
     </div>
   );
 }

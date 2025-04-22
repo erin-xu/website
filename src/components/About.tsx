@@ -5,7 +5,7 @@ import china from '../images/belgium.jpg';
 
 const About = () => {
   return (
-    <section id="about" className="about-container">
+    <section id="about" className="about">
       <div className="about-text">
         <p className="hi">hi, my name is</p>
         <p className="name">Erin Xu.</p>

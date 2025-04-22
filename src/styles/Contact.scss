@@ -1,0 +1,40 @@
+.contact-icons {
+  position: fixed;
+  bottom: 8vh;
+  right: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  z-index: 1000;
+
+  a {
+    color: white;
+    font-size: 1.5vw; // scales with screen width
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #A8DAFF;
+      transform: translateX(-0.2vw);
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    right: 1.5vw;
+    bottom: 3vh;
+
+    a {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    right: 1rem;
+    bottom: 2vh;
+
+    a {
+      font-size: 1rem;
+    }
+  }
+}
