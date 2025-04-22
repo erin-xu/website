@@ -80,7 +80,7 @@ const Navbar = () => {
       {sections.map((section) => (
         section === "resume" ? (
           <a
-            href={'/ErinXu_Resume.pdf'} target="_blank" rel="noopener noreferrer"
+            href={'/website/ErinXu_Resume.pdf'} target="_blank" rel="noopener noreferrer"
             className={`nav-item ${activeSection === section ? "active" : ""}`}
           >
             {section}
